@@ -7,7 +7,7 @@ add_library(core STATIC command_line.cpp
 	                    platform.h
 	                    types.h)
 
-target_link_libraries(core PRIVATE spdlog::spdlog)
+target_link_libraries(core PUBLIC spdlog::spdlog)
 
 # container sources 
 target_sources(core PRIVATE
@@ -24,6 +24,7 @@ target_sources(core PRIVATE
 	error/callstack.h
 	error/callstack_android.cpp
 	error/callstack_linux.cpp
+	error/callstack_windows.cpp
 	error/error.cpp
 	error/error.h)
 
