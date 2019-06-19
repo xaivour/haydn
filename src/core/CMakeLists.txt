@@ -45,8 +45,6 @@ target_sources(core PRIVATE
 	memory/memory.h
 	memory/pool_allocator.cpp
 	memory/pool_allocator.h
-	memory/proxy_allocator.cpp
-	memory/proxy_allocator.h
 	memory/stack_allocator.cpp
 	memory/stack_allocator.h
 	memory/temp_allocator.h
@@ -71,6 +69,26 @@ target_sources(core PRIVATE
 	strings/types.h 
 	strings/utf8.cpp 
 	strings/utf8.h)
+
+# log sources 
+target_sources(core PRIVATE
+	log/log.cpp
+	log/log.h)
+
+# thread sources
+target_sources(core PRIVATE
+	thread/atomic_int.cpp
+	thread/atomic_int.h
+	thread/condition_variable.cpp
+	thread/condition_variable.h
+	thread/mutex.cpp
+	thread/mutex.h
+	thread/scoped_mutex.h
+	thread/semaphore.cpp
+	thread/semaphore.h
+	thread/thread.cpp
+	thread/thread.h
+	thread/types.h)
 
 
 

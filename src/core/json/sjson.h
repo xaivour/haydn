@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "core/guid.h"
+// #include "core/guid.h"
 #include "core/json/types.h"
 // #include "core/math/types.h"
 #include "core/strings/types.h"

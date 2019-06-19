@@ -7,11 +7,9 @@
 #include "core/error/error.h"
 #include "core/memory/temp_allocator.h"
 #include "core/strings/string_stream.h"
-#include "device/log.h"
+#include "core/log/log.h"
 #include <stdarg.h>
 #include <stdlib.h> // exit
-
-LOG_SYSTEM(ERROR, "error")
 
 namespace haydn
 {
@@ -28,7 +26,7 @@ namespace error
 		ss << "Stacktrace:\n";
 		callstack(ss);
 
-		loge(ERROR, string_stream::c_str(ss));
+		HY_INTERNAL_ERROR(string_stream::c_str(ss));
 		exit(EXIT_FAILURE);
 	}
 
