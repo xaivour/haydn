@@ -1,1 +1,6 @@
 \build/
+\app/
+\bin-int/
+\haydn/
+\bin/
+Makefile
